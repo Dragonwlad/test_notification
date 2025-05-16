@@ -1,5 +1,4 @@
 """Module with exception classes."""
-from starlette.requests import ClientDisconnect
 
 
 class UnexpectedError(Exception):
