@@ -1,0 +1,80 @@
+line-length = 120
+indent-width = 4
+target-version = "py311"
+include = ["*.py"]
+
+exclude = [
+    ".git",
+    ".git-rewrite",
+    ".mypy_cache",
+    ".pyenv",
+    ".pytest_cache",
+    ".pytype",
+    ".ruff_cache",
+    ".venv",
+    ".vscode",
+    "__pypackages__",
+    "_build",
+    "build",
+    "dist",
+    "node_modules",
+    "site-packages",
+    "venv",
+    "app.py"
+]
+
+ignore = [
+    "RUF003",
+    "D100",
+    "G001",
+    "UP032" # Use f-string instead of `format` call разобрать почему линтер не одобряет .format
+]
+
+
+[lint]
+select = [
+    "G",
+    "D",
+    "E",
+    "W",
+    "F",
+    "B",
+    "I",
+    "Q",
+    "S",
+    "N",
+    "UP",
+    "FA",
+    "C4",
+    "T20",
+    "SIM",
+    "PIE",
+    "PLE",
+    "PLR",
+    "LOG",
+    "FBT",
+    "ANN",
+    "RSE",
+    "ARG",
+    "PLW",
+    "RET",
+    "SIM",
+    "COM",
+    "RUF",
+    "ASYNC",
+]
+
+[lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "single"
+multiline-quotes = "single"
+
+[lint.pydocstyle]
+convention = "google"
+
+[format]
+quote-style = "single"
+indent-style = "space"
+line-ending = "auto"
+
+[lint.per-file-ignores]
