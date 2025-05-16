@@ -48,8 +48,6 @@ class LoggingSettings(Settings):
         super().__init__(**configuration)
         self.LOG_FOLDER.mkdir(exist_ok=True)
 
-    # @field_validator('LOG_SIZE', pre=True, always=True)
-    # TODO: разобраться в чем разница с validator и сделать
     @field_validator('LOG_SIZE')
     @classmethod
     def _validate_log_size(cls, log_size: str) -> int:
